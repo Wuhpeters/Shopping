@@ -1,0 +1,4 @@
+
+m	java:S117X"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Žîè’8Ï“¯ ˆ1
+t	java:S116"SRename this field "TIPOLOJA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ä•ÌŒýÿÿÿÿ8Ã€® ˆ1
+U	java:S106p"9Replace this use of System.out or System.err by a logger.(‘ø•¾8ÄÕõŸˆ1

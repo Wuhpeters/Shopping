@@ -1,0 +1,5 @@
+
+m	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(îè’8ïàÇ ˆ1
+q
+java:S1104"TMake TIPOLOJA a static final constant or non-public and provide accessors if needed.(‰»´8íõ¿ ˆ1
+o	java:S116"SRename this field "TIPOLOJA" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(‰»´8ğõ¿ ˆ1
