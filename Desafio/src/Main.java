@@ -1,6 +1,6 @@
 public class Main {
 
-    public static void teste(String[] args){
+    public static void main(String[] args){
         Endereco end1 = new Endereco("rua1", "Sao Sepe", "RS", "Brasil", "9555555", "2", "Sem");
         Data data1 = new Data(02, 02, 2020);
         Loja botc = new Cosmetico("Botic", 20, 2550, end1, data1, 0.5, 10);
@@ -9,13 +9,13 @@ public class Main {
         Produto batom = new Produto("batom", 10, data1);
 
         botc.insereProduto(batom);
-        botc.removeProduto("batom");
+//        botc.removeProduto("batom");
 
         Loja compumaq = new Informatica("Compumaq", 38, 1900, end1, data1, 80000, 500);
         Loja infovale = new Informatica("Infovale", 8, 1900, end1, data1, 8000, 50);
 
 
-//        botc.imprimeProdutos();
+        botc.imprimeProdutos();
 
         Shopping borbom = new Shopping("Borobm", end1, 20);
         borbom.insereLoja(botc);
@@ -29,7 +29,7 @@ public class Main {
 
     }
 
-    public static void main(String[] args){
+    public static void teste(String[] args){
         System.out.println("[Laboratório I]\n Desafio: Validador - Etapa 04\n");
 
         //// Verificação da classe Endereco

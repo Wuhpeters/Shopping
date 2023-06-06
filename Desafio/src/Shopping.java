@@ -56,14 +56,49 @@ public class Shopping {
     }
 
     public int quantidadeLojasPorTipo(String tipoLoja) {
+        int total = 0;
 
-        int quantidadeLojas = 0;
-        for (int i = 0; i < lojas.length; i++) {
-            if (lojas[i] != null && tipoLoja.equals(lojas[i].getTipoLoja())) {
-                quantidadeLojas++;
-            }
+        switch (tipoLoja) {
+            case "Cosmético":
+                for (int i = 0; i < lojas.length; i++) {
+                    if (lojas[i] instanceof Cosmetico) {
+                        total++;
+                    }
+                }
+                break;
+            case "Informática":
+                for (int i = 0; i < lojas.length; i++) {
+                    if (lojas[i] instanceof Informatica) {
+                        total++;
+                    }
+                }
+                break;
+            case "Alimentação":
+                for (int i = 0; i < lojas.length; i++) {
+                    if (lojas[i] instanceof Alimentacao) {
+                        total++;
+                    }
+                }
+                break;
+            case "Bijuteria":
+                for (int i = 0; i < lojas.length; i++) {
+                    if (lojas[i] instanceof Bijuteria) {
+                        total++;
+                    }
+                }
+                break;
+            case "Vestuário":
+                for (int i = 0; i < lojas.length; i++) {
+                    if (lojas[i] instanceof Vestuario) {
+                        total++;
+                    }
+                }
+                break;
+            default:
+                total = -1;
+                break;
         }
-        return quantidadeLojas != 0 ? quantidadeLojas : -1;
+        return total;
     }
 
     public Loja lojaSeguroMaisCaro() {
@@ -71,11 +106,21 @@ public class Shopping {
         Loja lojaMaisCara = null;
         double maiorSeguro = 0.0;
 
+//        for (Loja loja : lojas) {
+//            if (loja instanceof Informatica) {
+//                Informatica informatica = (Informatica) loja;
+//                double valorSeguro = informatica.getSeguroEletronicos();
+//                if (valorSeguro > maiorSeguro) {
+//                    maiorSeguro = valorSeguro;
+//                    lojaMaisCara = loja;
+//                }
+//            }
+//        }
         for (int i = 0; i < lojas.length; i++) {
-            if (lojas[i] != null && "Informatica".equals(lojas[i].getTipoLoja())) {
+            if (lojas[i] instanceof Informatica){
                 Informatica informatica = (Informatica) lojas[i];
                 double valorSeguro = informatica.getSeguroEletronicos();
-                if(maiorSeguro < valorSeguro){
+                if (maiorSeguro < valorSeguro){
                     maiorSeguro = valorSeguro;
                     lojaMaisCara = lojas[i];
                 }

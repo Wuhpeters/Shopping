@@ -9,8 +9,6 @@ public class Loja{
 
     private Produto[] estoqueProdutos;
 
-    private String tipoLoja = "Loja";
-
     public Loja(String nome, int quantidadeFuncionarios, double salarioBaseFuncionario, Endereco endereco, Data dataFundacao,int tamanhoEstoque){
         if(dataFundacao.verificaData(dataFundacao.getDia(), dataFundacao.getMes(), dataFundacao.getAno())){
             this.dataFundacao = dataFundacao;
@@ -81,14 +79,6 @@ public class Loja{
         this.estoqueProdutos = estoqueProdutos;
     }
 
-    public String getTipoLoja() {
-        return tipoLoja;
-    }
-
-    public void setTipoLoja(String tipoLoja) {
-        this.tipoLoja = tipoLoja;
-    }
-
     public double gastosComSalario(){
         if(this.salarioBaseFuncionario == -1){
             return -1;
@@ -109,7 +99,9 @@ public class Loja{
 
     public void imprimeProdutos(){
         for (int i = 0; i < estoqueProdutos.length; i++) {
-            System.out.println(estoqueProdutos[i]);
+            if(estoqueProdutos[i] != null){
+                System.out.println(estoqueProdutos[i].toString());
+            }
         }
     }
 
